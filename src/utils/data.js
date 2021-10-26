@@ -1,4 +1,4 @@
-let users = {
+export const candidates = {
     alladawoud: {
       id: 'alladawoud',
       name: 'Alaa Dawoud',
@@ -16,7 +16,7 @@ let users = {
     }
   }
   
-  let threads = {
+export const threads = {
     "8xf0y6ziyjabvozdd253nd": {
       id: '8xf0y6ziyjabvozdd253nd',
       author: 'aboabo',
@@ -50,3 +50,4 @@ let users = {
     comments: [{text:"this is my comment", aid:"aboabo"}]
     },
     }
+

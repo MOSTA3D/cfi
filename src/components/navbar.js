@@ -6,10 +6,10 @@ class Navbar extends React.Component{
         const login = true;
         return(
             <nav>
+                <span>We<span>Vote</span></span>
                 <ul>
-                    <li>We<span>Vote</span></li>
-                    <li><Link>Home</Link></li>
-                    <li><Link>Threads</Link></li>
+                    <li><Link to="/home">Home</Link></li>
+                    <li><Link to="/threads">Threads</Link></li>
                 </ul>
                 <div className="right">
                     {!login? (
