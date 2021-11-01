@@ -1,13 +1,24 @@
 import React from "react";
+import { connect } from "react-redux";
+import MinThread from "./minThread";
 
-class Thrds extends React.Component{
+class Threads extends React.Component{
     render(){
+        const {threads} = this.props;
         return(
-            <div>
-
-            </div>
+            <ul className="thread-list">
+                {
+                    Object.values(threads).map(thd=><MinThread key={thd.id} thd={thd} />)
+                }
+            </ul>
         )
     }
 }
 
-export default Thrds;
+function mapStateToProps({threads}){
+    return {
+        threads
+    }
+}
+
+export default connect(mapStateToProps)(Threads);

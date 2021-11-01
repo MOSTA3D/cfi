@@ -9,7 +9,7 @@ function recieveThreads(threads){
     }
 }
 
-function handleRecieveThreads(){
+export function handleRecieveThreads(){
     return (dispatch, getState)=>{
         getThreads().then(threads=>dispatch(recieveThreads(threads)))
     }

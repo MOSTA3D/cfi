@@ -9,6 +9,7 @@ function recieveCands(candidates){
 }
 
 export function handleRecieveCands(){
+    getCands().then(cands=>console.log("this is from", cands));
     return (dispatch, getState)=>{
         getCands().then(cands=>dispatch(recieveCands(cands)));
     }

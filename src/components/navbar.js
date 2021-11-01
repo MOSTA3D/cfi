@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 class Navbar extends React.Component{
     render(){
-        const login = true;
+        const login = false;
         return(
             <nav>
                 <span>We<span>Vote</span></span>
@@ -14,8 +14,8 @@ class Navbar extends React.Component{
                 <div className="right">
                     {!login? (
                         <>
-                            <span>Login</span>
-                            <span>SignUp</span>
+                            <span onClick={this.props.setSignin}>Login</span>
+                            <span onClick={this.props.setSignup}>SignUp</span>
                         </>
                     ):(
                         <>
